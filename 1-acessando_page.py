@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 
 # 1 - Utilizando o WebDriver
-browser = webdriver.Firefox()
+browser = webdriver.Chrome()
 
 browser.get('http://www.amazon.com.br')
 
