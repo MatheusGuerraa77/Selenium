@@ -16,4 +16,11 @@ elem.send_keys(Keys.ENTER)
 time.sleep(5)
 browser.save_screenshot('dominio.png')
 
-browser.quit()
+# 3 - Buscando informações
+results = browser.find_elements(By.TAG_NAME, 'strong')
+# import pdb
+# pdb.set_trace()
+print(f'Domínio {results[1].text} está {results[2].text}')
+
+
+# browser.quit()
