@@ -34,4 +34,22 @@ try:
 except Exception as e:
     print("Não foi possível calcular o número de páginas.", e)
 
+# 7-Navegando entre páginas
+url_page = browser.find_element(
+    By.XPATH,
+    '//a[@aria-label="Page 2"]').get_attribute('href')
+
+current_page = 0
+start = 10
+
+while current_page <= 10:
+    if not current_page == 0:
+        url_page = url_page.replace(
+            'start=%s' %start,
+            'start=%s' %(start + 10),
+        )
+        start += 10
+    current_page += 1
+    browser.get(url_page)
+    
 browser.quit()
