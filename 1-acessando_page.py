@@ -5,7 +5,7 @@ import time
 
 
 # 1 - Utilizando o WebDriver
-browser = webdriver.Firefox()
+browser = webdriver.Chrome()
 
 browser.get('http://www.amazon.com.br')
 
